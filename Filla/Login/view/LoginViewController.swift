@@ -7,9 +7,18 @@
 //
 
 import UIKit
+import TTTAttributedLabel
 
 class LoginViewController: UIViewController, LoginView, LoginSegueHandler {
 
+    // MARK: UI items
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var passwordLabel: UILabel!
+    @IBOutlet weak var username: UITextField!
+    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var resetPassword: TTTAttributedLabel!
+    @IBOutlet weak var login: UIButton!
+   
     var presenter: LoginPresenter?
     
     enum LoginSegueIdentifiers: String {
@@ -25,12 +34,48 @@ class LoginViewController: UIViewController, LoginView, LoginSegueHandler {
         let configurator = LoginConfigurator(self)
         configurator.configure()
     }
+    
+    override func viewDidLayoutSubviews() {
+        
+        super.viewDidLayoutSubviews()
+        
+        updateContent()
+        configureForgotPassword()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: Private methods
+    func updateContent() {
+        
+        usernameLabel.text = "LOGIN".localized
+        passwordLabel.text = "PASSWORD".localized
+        resetPassword.text = "RESET_PASSWORD".localized
+        
+        login.setTitle("LOGIN".localized, forState: .Normal)
+    }
+    
+    func configureForgotPassword() {
+        
+        let tap = UITapGestureRecognizer(target: self, action: Selector("doResetPassword:"))
+        resetPassword.addGestureRecognizer(tap)
+    }
+    
+    // MARK: User interaction
+    @IBAction func doLogin(sender: AnyObject) {
+        
+        
+    }
+    
+    func doResetPassword(sender:UITapGestureRecognizer) {
+     
+        print("👲👲")
+    }
+    
+    // MARK: LoginSegueHandler implementation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         // 🎉 goodbye pyramid of doom!

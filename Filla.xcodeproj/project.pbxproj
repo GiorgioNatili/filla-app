@@ -16,6 +16,8 @@
 		5930EEF71D6B9CAA0017FB0A /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5930EEF41D6B9CAA0017FB0A /* LoginRouter.swift */; };
 		5930EEF81D6B9CAA0017FB0A /* LoginSegueHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5930EEF51D6B9CAA0017FB0A /* LoginSegueHandler.swift */; };
 		5930EEFC1D6BA0020017FB0A /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5930EEFB1D6BA0020017FB0A /* LoginInteractor.swift */; };
+		5930EF001D6BB2DD0017FB0A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5930EEFF1D6BB2DD0017FB0A /* Localizable.strings */; };
+		5930EF021D6BB4B70017FB0A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5930EF011D6BB4B70017FB0A /* String+Extension.swift */; };
 		598AADB91D6B423A009910BC /* splash-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 598AADB81D6B423A009910BC /* splash-screen.png */; };
 		598AADBE1D6B4553009910BC /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598AADBD1D6B4553009910BC /* UIColor+Extension.swift */; };
 		598AADDC1D6B6E25009910BC /* LoginInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598AADD21D6B6E25009910BC /* LoginInitializer.swift */; };
@@ -59,6 +61,8 @@
 		5930EEF41D6B9CAA0017FB0A /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		5930EEF51D6B9CAA0017FB0A /* LoginSegueHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSegueHandler.swift; sourceTree = "<group>"; };
 		5930EEFB1D6BA0020017FB0A /* LoginInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		5930EEFF1D6BB2DD0017FB0A /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		5930EF011D6BB4B70017FB0A /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		598AADB81D6B423A009910BC /* splash-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash-screen.png"; sourceTree = "<group>"; };
 		598AADBD1D6B4553009910BC /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		598AADD21D6B6E25009910BC /* LoginInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInitializer.swift; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				598AADB81D6B423A009910BC /* splash-screen.png */,
+				5930EEFF1D6BB2DD0017FB0A /* Localizable.strings */,
 			);
 			path = assets;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				598AADBD1D6B4553009910BC /* UIColor+Extension.swift */,
+				5930EF011D6BB4B70017FB0A /* String+Extension.swift */,
 			);
 			name = extensions;
 			sourceTree = "<group>";
@@ -415,6 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				598AADB91D6B423A009910BC /* splash-screen.png in Resources */,
+				5930EF001D6BB2DD0017FB0A /* Localizable.strings in Resources */,
 				59BA736D1D6B25A800DB9FF9 /* LaunchScreen.storyboard in Resources */,
 				59BA736A1D6B25A800DB9FF9 /* Assets.xcassets in Resources */,
 				59BA73651D6B25A800DB9FF9 /* Main.storyboard in Resources */,
@@ -511,6 +518,7 @@
 				598AADDE1D6B6E25009910BC /* LoginScenario.swift in Sources */,
 				59BA73681D6B25A800DB9FF9 /* Filla.xcdatamodeld in Sources */,
 				598AADDF1D6B6E25009910BC /* LoginServices.swift in Sources */,
+				5930EF021D6BB4B70017FB0A /* String+Extension.swift in Sources */,
 				592663451D6B8937009A77DD /* LoginSegueHandler+Extension.swift in Sources */,
 				598AADDD1D6B6E25009910BC /* User.swift in Sources */,
 				5930EEF71D6B9CAA0017FB0A /* LoginRouter.swift in Sources */,
