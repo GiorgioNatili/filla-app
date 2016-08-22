@@ -5,6 +5,11 @@ use_frameworks!
 
 target 'Filla' do
   pod 'Spinner'
+  pod 'Fabric'
+  pod 'Crashlytics'
+  pod 'Fabric'
+  pod 'Digits'
+  pod 'TwitterCore'
 end
 
 target 'FillaTests' do
