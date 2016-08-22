@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1623A70072B43E0F114DC56B /* Pods_Filla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F8FA377D5D2C935C113BEB5 /* Pods_Filla.framework */; };
+		598AADB91D6B423A009910BC /* splash-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 598AADB81D6B423A009910BC /* splash-screen.png */; };
+		598AADBE1D6B4553009910BC /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598AADBD1D6B4553009910BC /* UIColor+Extension.swift */; };
 		59BA73601D6B25A400DB9FF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BA735F1D6B25A400DB9FF9 /* AppDelegate.swift */; };
 		59BA73621D6B25A400DB9FF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BA73611D6B25A400DB9FF9 /* ViewController.swift */; };
 		59BA73651D6B25A800DB9FF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59BA73631D6B25A800DB9FF9 /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		26391496025F7AE44B5B1605 /* Pods-Filla.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Filla.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Filla/Pods-Filla.debug.xcconfig"; sourceTree = "<group>"; };
+		598AADB81D6B423A009910BC /* splash-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash-screen.png"; sourceTree = "<group>"; };
+		598AADBD1D6B4553009910BC /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		59BA735C1D6B25A400DB9FF9 /* Filla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Filla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59BA735F1D6B25A400DB9FF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59BA73611D6B25A400DB9FF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +85,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		598AADB71D6B423A009910BC /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				598AADB81D6B423A009910BC /* splash-screen.png */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		598AADBC1D6B4522009910BC /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				598AADBD1D6B4553009910BC /* UIColor+Extension.swift */,
+			);
+			name = extensions;
+			sourceTree = "<group>";
+		};
 		59BA73531D6B25A400DB9FF9 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +126,8 @@
 		59BA735E1D6B25A400DB9FF9 /* Filla */ = {
 			isa = PBXGroup;
 			children = (
+				598AADBC1D6B4522009910BC /* extensions */,
+				598AADB71D6B423A009910BC /* assets */,
 				59BA735F1D6B25A400DB9FF9 /* AppDelegate.swift */,
 				59BA73611D6B25A400DB9FF9 /* ViewController.swift */,
 				59BA73631D6B25A800DB9FF9 /* Main.storyboard */,
@@ -260,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				598AADB91D6B423A009910BC /* splash-screen.png in Resources */,
 				59BA736D1D6B25A800DB9FF9 /* LaunchScreen.storyboard in Resources */,
 				59BA736A1D6B25A800DB9FF9 /* Assets.xcassets in Resources */,
 				59BA73651D6B25A800DB9FF9 /* Main.storyboard in Resources */,
@@ -351,6 +374,7 @@
 				59BA73621D6B25A400DB9FF9 /* ViewController.swift in Sources */,
 				59BA73681D6B25A800DB9FF9 /* Filla.xcdatamodeld in Sources */,
 				59BA73601D6B25A400DB9FF9 /* AppDelegate.swift in Sources */,
+				598AADBE1D6B4553009910BC /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
