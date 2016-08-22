@@ -10,6 +10,7 @@ target 'Filla' do
   pod 'Fabric'
   pod 'Digits'
   pod 'TwitterCore'
+  pod 'TTTAttributedLabel'
 end
 
 target 'FillaTests' do

@@ -5,6 +5,7 @@ PODS:
     - TwitterCore (= 2.3.0)
   - Fabric (1.6.8)
   - Spinner (0.1.0)
+  - TTTAttributedLabel (2.0.0)
   - TwitterCore (2.3.0):
     - Fabric
 
@@ -13,6 +14,7 @@ DEPENDENCIES:
   - Digits
   - Fabric
   - Spinner
+  - TTTAttributedLabel
   - TwitterCore
 
 SPEC CHECKSUMS:
@@ -20,6 +22,7 @@ SPEC CHECKSUMS:
   Digits: af82d24ec38035cc555b60f55cca5abc68a76bed
   Fabric: 5755268d0171435ab167e3d0878a28a777deaf10
   Spinner: f8ebba00064415f561e3474f1cb3aaca5df4e8fa
+  TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
   TwitterCore: 817eae3e291fa4125b47789e26a4f6f024115c1f
 
 COCOAPODS: 0.39.0
