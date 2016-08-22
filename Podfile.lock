@@ -1,0 +1,10 @@
+PODS:
+  - Spinner (0.1.0)
+
+DEPENDENCIES:
+  - Spinner
+
+SPEC CHECKSUMS:
+  Spinner: f8ebba00064415f561e3474f1cb3aaca5df4e8fa
+
+COCOAPODS: 0.39.0
