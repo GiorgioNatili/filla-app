@@ -8,6 +8,7 @@
 
 import UIKit
 import TTTAttributedLabel
+import SwiftValidator
 
 class LoginViewController: UIViewController, LoginView, LoginSegueHandler {
 
@@ -18,8 +19,10 @@ class LoginViewController: UIViewController, LoginView, LoginSegueHandler {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var resetPassword: TTTAttributedLabel!
     @IBOutlet weak var login: UIButton!
+    @IBOutlet weak var errorMessage: UILabel!
    
     var presenter: LoginPresenter?
+    var validator: Validator?
     
     enum LoginSegueIdentifiers: String {
         
@@ -33,6 +36,8 @@ class LoginViewController: UIViewController, LoginView, LoginSegueHandler {
         // Do any additional setup after loading the view.
         let configurator = LoginConfigurator(self)
         configurator.configure()
+        
+        validator = Validator()
     }
     
     override func viewDidLayoutSubviews() {
@@ -41,6 +46,7 @@ class LoginViewController: UIViewController, LoginView, LoginSegueHandler {
         
         updateContent()
         configureForgotPassword()
+        configureValidator()
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,15 +70,34 @@ class LoginViewController: UIViewController, LoginView, LoginSegueHandler {
         resetPassword.addGestureRecognizer(tap)
     }
     
+    func configureValidator() {
+        
+        if let v = validator {
+        
+            v.registerField(username, errorLabel: errorMessage, rules: [RequiredRule(message: "MISSING_PASSWORD".localized)])
+            v.registerField(password, errorLabel: errorMessage, rules: [RequiredRule(message: "RESET_PASSWORD".localized)])
+        }
+    }
+    
     // MARK: User interaction
     @IBAction func doLogin(sender: AnyObject) {
         
+        validator?.validate({errors in
         
+            if errors.count == 0 {
+             
+                if let user = self.username.text,
+                   let pass = self.password.text {
+                        
+                        self.presenter?.authenticate(user, password: pass)
+                }
+            }
+        })
     }
     
     func doResetPassword(sender:UITapGestureRecognizer) {
      
-        print("👲👲")
+       
     }
     
     // MARK: LoginSegueHandler implementation

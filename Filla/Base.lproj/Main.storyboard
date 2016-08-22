@@ -68,16 +68,25 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHC-kR-g9h">
+                                <rect key="frame" x="20" y="571" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="oQp-BW-daZ" firstAttribute="top" secondItem="Nsh-kW-JSR" secondAttribute="bottom" constant="21" id="2Sf-Fs-6yb"/>
                             <constraint firstItem="IwA-vu-Vkg" firstAttribute="top" secondItem="oQp-BW-daZ" secondAttribute="bottom" constant="8" id="2ow-oW-YGO"/>
                             <constraint firstItem="IwA-vu-Vkg" firstAttribute="leading" secondItem="c3e-wX-OGC" secondAttribute="leadingMargin" constant="121" id="BgM-El-ZA6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wHC-kR-g9h" secondAttribute="trailing" id="Q6t-oS-Ouf"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="wHC-kR-g9h" secondAttribute="leading" id="WGS-RG-UaL"/>
                             <constraint firstItem="Nsh-kW-JSR" firstAttribute="baseline" secondItem="zoN-a5-F0K" secondAttribute="baseline" constant="-1" id="dLG-wl-aEB"/>
                             <constraint firstItem="Suq-28-j7V" firstAttribute="baseline" secondItem="vQG-ps-yR5" secondAttribute="baseline" constant="1" id="jQC-sF-aLd"/>
                             <constraint firstItem="zoN-a5-F0K" firstAttribute="leading" secondItem="c3e-wX-OGC" secondAttribute="leadingMargin" constant="18" id="jwj-T4-4iy"/>
                             <constraint firstItem="zoN-a5-F0K" firstAttribute="top" secondItem="Suq-28-j7V" secondAttribute="bottom" constant="29" id="kbU-mp-sCy"/>
+                            <constraint firstItem="37b-Z9-SZ2" firstAttribute="top" secondItem="wHC-kR-g9h" secondAttribute="bottom" constant="8" id="kdn-YV-IAg"/>
                             <constraint firstItem="Suq-28-j7V" firstAttribute="top" secondItem="W3G-qe-anU" secondAttribute="bottom" constant="154" id="nwk-f7-kcS"/>
                             <constraint firstItem="vQG-ps-yR5" firstAttribute="leading" secondItem="Suq-28-j7V" secondAttribute="trailing" constant="8" id="seO-V5-il9"/>
                             <constraint firstItem="Suq-28-j7V" firstAttribute="leading" secondItem="c3e-wX-OGC" secondAttribute="leadingMargin" constant="18" id="tT5-gP-jKB"/>
@@ -86,6 +95,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="errorMessage" destination="wHC-kR-g9h" id="UF1-Qk-Xae"/>
                         <outlet property="login" destination="oQp-BW-daZ" id="PX5-1b-7GV"/>
                         <outlet property="password" destination="Nsh-kW-JSR" id="zsx-K5-SfP"/>
                         <outlet property="passwordLabel" destination="zoN-a5-F0K" id="0SO-uy-uKQ"/>

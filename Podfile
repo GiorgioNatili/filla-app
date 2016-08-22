@@ -11,6 +11,7 @@ target 'Filla' do
   pod 'Digits'
   pod 'TwitterCore'
   pod 'TTTAttributedLabel'
+  pod 'SwiftValidator', '3.0.1'
 end
 
 target 'FillaTests' do
