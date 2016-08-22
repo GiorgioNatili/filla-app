@@ -9,19 +9,19 @@
 import Foundation
 import UIKit
 
-extension LoginSegueIdentifier where Self: UIViewController, SegueIdentifier.RawValue == String {
+extension LoginSegueHandler where Self: UIViewController, LoginSegueIdentifiers.RawValue == String {
     
-    func performSegueWithIdentifier(segueIdentifier: SegueIdentifier, sender: AnyObject?) {
+    func performSegueWithIdentifier(segueIdentifier: LoginSegueIdentifiers, sender: AnyObject?) {
             
         performSegueWithIdentifier(segueIdentifier.rawValue, sender: sender)
     }
     
-    func segueIdentifierForSegue(segue: UIStoryboardSegue) -> SegueIdentifier {
+    func segueIdentifierForSegue(segue: UIStoryboardSegue) -> LoginSegueIdentifiers {
         
         // still have to use guard stuff here, but at least you're
         // extracting it this time
         guard let identifier = segue.identifier,
-            segueIdentifier = SegueIdentifier(rawValue: identifier) else {
+            segueIdentifier = LoginSegueIdentifiers(rawValue: identifier) else {
                 
                 fatalError("Invalid segue identifier \(segue.identifier).")
         }
