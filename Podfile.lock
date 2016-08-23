@@ -5,9 +5,9 @@ PODS:
   - Digits (2.3.0):
     - TwitterCore (= 2.3.0)
   - Fabric (1.6.8)
-  - Nimble (4.1.0)
+  - Nimble (3.2.0)
   - ObjectMapper (1.1.5)
-  - Quick (0.9.3)
+  - Quick (0.9.1)
   - RxAlamofire (2.2):
     - RxAlamofire/Core (= 2.2)
   - RxAlamofire/Core (2.2):
@@ -27,9 +27,9 @@ DEPENDENCIES:
   - Crashlytics
   - Digits
   - Fabric
-  - Nimble
+  - Nimble (= 3.2.0)
   - ObjectMapper (= 1.1.5)
-  - Quick
+  - Quick (= 0.9.1)
   - RxAlamofire
   - RxCocoa (= 2.2.0)
   - RxSwift (= 2.2.0)
@@ -43,9 +43,9 @@ SPEC CHECKSUMS:
   Crashlytics: 76f6beaff70acf226139582c09c78461597c2b98
   Digits: af82d24ec38035cc555b60f55cca5abc68a76bed
   Fabric: 5755268d0171435ab167e3d0878a28a777deaf10
-  Nimble: 97a0a4cae5124c117115634b2d055d8c97d0af19
+  Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
   ObjectMapper: 528b1a6677a6acac7747edd508576983e76a9148
-  Quick: 13a2a2b19a5d8e3ed4fd0c36ee46597fd77ebf71
+  Quick: a5221fc21788b6aeda934805e68b061839bc3165
   RxAlamofire: 250b7846cedbd189d6190e4f83caa01ee1f1eceb
   RxCocoa: 42efb7a7145a8d1d5878e94ce48a580d29e0c796
   RxSwift: b8a749f2204c6c7a5c29b306a9c3bc11d5b87c5b

@@ -20,8 +20,8 @@ target 'Filla' do
 end
 
 target 'FillaTests' do
-  pod 'Quick'
-  pod 'Nimble'
+  pod 'Quick', '0.9.1'
+  pod 'Nimble', '3.2.0'
 end
 
 target 'FillaUITests' do
