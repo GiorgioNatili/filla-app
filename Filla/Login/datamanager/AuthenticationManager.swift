@@ -7,12 +7,23 @@
 //
 
 import Foundation
+import ObjectMapper
+import RxAlamofire
+import RxSwift
 
-class AuthenticationManager: NSObject, LoginManager {
+class AuthenticationManager: LoginManager {
 
+    var fakeURL:String
     
-    func auhtenticate(user: User) {
+    init() {
         
+        self.fakeURL = "https://jsonplaceholder.typicode.com/posts"
+    }
+    
+    // MARK: LoginManager implementation
+    func auhtenticate(user: User) -> Observable<AnyObject> {
+        
+        return JSON(.GET, fakeURL).observeOn(MainScheduler.instance)
     }
     
     func logout() {

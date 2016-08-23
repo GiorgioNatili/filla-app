@@ -21,7 +21,11 @@ class LoginInteractor: LoginInteractorInput {
     // MARK: LoginInteractorInput implementation
     func aunthenticate(user: User) {
         
-        services.auhtenticate(user)
+        services.auhtenticate(user).subscribe {
+            
+            print($0)
+            self.presenter?.loginDidSucceeded()
+        }
     }
     
     func resetPassword(email: String) {

@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol LoginManager {
     
-    func auhtenticate(user: User)
+    func auhtenticate(user: User) -> Observable<AnyObject>
     func logout()
 }

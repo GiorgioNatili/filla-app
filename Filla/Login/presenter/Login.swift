@@ -31,8 +31,8 @@ class Login:LoginPresenter, LoginInteractorOutput {
     }
     
     // MARK: LoginPresenter implementation
-    func authenticate(username: String, password: String) {
-        
+    func authenticate(username: String, _ password: String) {
+        interactor?.aunthenticate(User(name: username, password: password))
     }
     
     func resetPassword(email: String) {

@@ -22,13 +22,16 @@ class LoginConfigurator {
     
     func configure() {
         
+        let presenter = Login()
+        
         let router = LoginRouter()
         let interactor = LoginInteractor()
-        
-        let presenter = Login()
         
         presenter.view = view
         presenter.router = router
         presenter.interactor = interactor
+        
+        view.presenter = presenter
+        interactor.presenter = presenter
     }
 }

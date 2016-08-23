@@ -89,7 +89,7 @@ class LoginViewController: UIViewController, LoginView, LoginSegueHandler {
                 if let user = self.username.text,
                    let pass = self.password.text {
                         
-                        self.presenter?.authenticate(user, password: pass)
+                        self.presenter?.authenticate(user, pass)
                 }
             }
         })
