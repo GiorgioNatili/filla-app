@@ -12,6 +12,11 @@ target 'Filla' do
   pod 'TwitterCore'
   pod 'TTTAttributedLabel'
   pod 'SwiftValidator', '3.0.1'
+  pod 'RxAlamofire'
+  pod 'Alamofire', '3.2.1'
+  pod 'RxSwift', '2.2.0'
+  pod 'RxCocoa', '2.2.0'
+  pod 'ObjectMapper', '1.1.5'
 end
 
 target 'FillaTests' do
