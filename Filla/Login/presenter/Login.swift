@@ -19,7 +19,7 @@ class Login:LoginPresenter, LoginInteractorOutput {
         
     }
     
-    // MARK: LoginInteractorOutput implementation
+    // MARK: - LoginInteractorOutput implementation
     func loginDidSucceeded() {
         
         router?.presentDashboard()
@@ -30,7 +30,7 @@ class Login:LoginPresenter, LoginInteractorOutput {
         view?.showErrorMessage(error)
     }
     
-    // MARK: LoginPresenter implementation
+    // MARK: - LoginPresenter implementation
     func authenticate(username: String, _ password: String) {
         interactor?.aunthenticate(User(name: username, password: password))
     }

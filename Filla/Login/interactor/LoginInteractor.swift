@@ -18,7 +18,7 @@ class LoginInteractor: LoginInteractorInput {
         services = AuthenticationManager()
     }
 
-    // MARK: LoginInteractorInput implementation
+    // MARK: - LoginInteractorInput implementation
     func aunthenticate(user: User) {
         
         services.auhtenticate(user).subscribe {

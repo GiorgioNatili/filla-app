@@ -12,7 +12,7 @@ import SwiftValidator
 
 class LoginViewController: UIViewController, LoginView, LoginSegueHandler {
 
-    // MARK: UI items
+    // MARK: - UI items
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var username: UITextField!
@@ -21,6 +21,7 @@ class LoginViewController: UIViewController, LoginView, LoginSegueHandler {
     @IBOutlet weak var login: UIButton!
     @IBOutlet weak var errorMessage: UILabel!
    
+    // MARK: - Instance members
     var presenter: LoginPresenter?
     var validator: Validator?
     
@@ -30,6 +31,7 @@ class LoginViewController: UIViewController, LoginView, LoginSegueHandler {
         case PremiumUser
     }
 
+    // MARK: - Livecycle override
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -54,7 +56,7 @@ class LoginViewController: UIViewController, LoginView, LoginSegueHandler {
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: Private methods
+    // MARK: - Private methods
     func updateContent() {
         
         usernameLabel.text = "LOGIN".localized
@@ -79,7 +81,7 @@ class LoginViewController: UIViewController, LoginView, LoginSegueHandler {
         }
     }
     
-    // MARK: User interaction
+    // MARK: - User interaction
     @IBAction func doLogin(sender: AnyObject) {
         
         validator?.validate({errors in
@@ -100,7 +102,7 @@ class LoginViewController: UIViewController, LoginView, LoginSegueHandler {
        
     }
     
-    // MARK: LoginSegueHandler implementation
+    // MARK: - LoginSegueHandler implementation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         // 🎉 goodbye pyramid of doom!
@@ -125,7 +127,7 @@ class LoginViewController: UIViewController, LoginView, LoginSegueHandler {
     }
     */
     
-    // MARK: LoginView implementation
+    // MARK: - LoginView implementation
     func showErrorMessage(message: String) {
         
     }

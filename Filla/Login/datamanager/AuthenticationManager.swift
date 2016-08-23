@@ -22,7 +22,7 @@ class AuthenticationManager: LoginManager {
         self.fakeLogout = "https://jsonplaceholder.typicode.com/users"
     }
     
-    // MARK: LoginManager implementation
+    // MARK: - LoginManager implementation
     func auhtenticate(user: User) -> Observable<AnyObject> {
         
         return JSON(.GET, fakeAuthentication).observeOn(MainScheduler.instance)
