@@ -13,22 +13,24 @@ import RxSwift
 
 class AuthenticationManager: LoginManager {
 
-    var fakeURL:String
+    var fakeAuthentication:String
+    var fakeLogout:String
     
     init() {
         
-        self.fakeURL = "https://jsonplaceholder.typicode.com/posts"
+        self.fakeAuthentication = "https://jsonplaceholder.typicode.com/posts"
+        self.fakeLogout = "https://jsonplaceholder.typicode.com/users"
     }
     
     // MARK: LoginManager implementation
     func auhtenticate(user: User) -> Observable<AnyObject> {
         
-        return JSON(.GET, fakeURL).observeOn(MainScheduler.instance)
+        return JSON(.GET, fakeAuthentication).observeOn(MainScheduler.instance)
     }
     
-    func logout() {
+    func logout() -> Observable<AnyObject> {
         
-        
+        return JSON(.GET, fakeLogout).observeOn(MainScheduler.instance)
     }
 }
 

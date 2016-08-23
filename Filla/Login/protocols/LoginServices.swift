@@ -12,5 +12,5 @@ import RxSwift
 protocol LoginManager {
     
     func auhtenticate(user: User) -> Observable<AnyObject>
-    func logout()
+    func logout() -> Observable<AnyObject>
 }
