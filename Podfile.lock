@@ -25,7 +25,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (= 3.2.1)
   - Crashlytics
-  - Digits
+  - Digits (= 2.3.0)
   - Fabric
   - Nimble (= 3.2.0)
   - ObjectMapper (= 1.1.5)
@@ -36,7 +36,7 @@ DEPENDENCIES:
   - Spinner
   - SwiftValidator (= 3.0.1)
   - TTTAttributedLabel
-  - TwitterCore
+  - TwitterCore (= 2.3.0)
 
 SPEC CHECKSUMS:
   Alamofire: f11d8624a05f5d39e0c99309b3e600a3ba64298a

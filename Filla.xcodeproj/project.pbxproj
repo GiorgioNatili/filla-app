@@ -32,6 +32,9 @@
 		59BA736D1D6B25A800DB9FF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59BA736B1D6B25A800DB9FF9 /* LaunchScreen.storyboard */; };
 		59BA73781D6B25A800DB9FF9 /* FillaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BA73771D6B25A800DB9FF9 /* FillaTests.swift */; };
 		59BA73831D6B25A800DB9FF9 /* FillaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BA73821D6B25A800DB9FF9 /* FillaUITests.swift */; };
+		59D836C91D6C6D4200339BFE /* LoginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D836C81D6C6D4200339BFE /* LoginTest.swift */; };
+		59D836CB1D6C6DEC00339BFE /* LoginViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D836CA1D6C6DEC00339BFE /* LoginViewControllerTest.swift */; };
+		59D836DB1D6D358B00339BFE /* LoginInputValidationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D836DA1D6D358B00339BFE /* LoginInputValidationDelegate.swift */; };
 		EEF1B2C354E0E54DEBDA4244 /* Pods_FillaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35383EAC8C3EAA9E12BD9A95 /* Pods_FillaTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +88,9 @@
 		59BA737E1D6B25A800DB9FF9 /* FillaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FillaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59BA73821D6B25A800DB9FF9 /* FillaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillaUITests.swift; sourceTree = "<group>"; };
 		59BA73841D6B25A800DB9FF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59D836C81D6C6D4200339BFE /* LoginTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTest.swift; sourceTree = "<group>"; };
+		59D836CA1D6C6DEC00339BFE /* LoginViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTest.swift; sourceTree = "<group>"; };
+		59D836DA1D6D358B00339BFE /* LoginInputValidationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInputValidationDelegate.swift; sourceTree = "<group>"; };
 		6F8FA377D5D2C935C113BEB5 /* Pods_Filla.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Filla.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FA9C7902D0131BE712FBF52 /* Pods-FillaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FillaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FillaTests/Pods-FillaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		954177CF8171736CC3080EB3 /* Pods-FillaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FillaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FillaTests/Pods-FillaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -238,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				592663351D6B836E009A77DD /* LoginViewController.swift */,
+				59D836DA1D6D358B00339BFE /* LoginInputValidationDelegate.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -287,6 +294,8 @@
 			children = (
 				59BA73771D6B25A800DB9FF9 /* FillaTests.swift */,
 				59BA73791D6B25A800DB9FF9 /* Info.plist */,
+				59D836C81D6C6D4200339BFE /* LoginTest.swift */,
+				59D836CA1D6C6DEC00339BFE /* LoginViewControllerTest.swift */,
 			);
 			path = FillaTests;
 			sourceTree = "<group>";
@@ -577,6 +586,7 @@
 				5930EF021D6BB4B70017FB0A /* String+Extension.swift in Sources */,
 				592663451D6B8937009A77DD /* LoginSegueHandler+Extension.swift in Sources */,
 				598AADDD1D6B6E25009910BC /* User.swift in Sources */,
+				59D836DB1D6D358B00339BFE /* LoginInputValidationDelegate.swift in Sources */,
 				5930EEF71D6B9CAA0017FB0A /* LoginRouter.swift in Sources */,
 				592663471D6B8D89009A77DD /* AuthenticationManager.swift in Sources */,
 				59BA73601D6B25A400DB9FF9 /* AppDelegate.swift in Sources */,
@@ -590,7 +600,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59D836CB1D6C6DEC00339BFE /* LoginViewControllerTest.swift in Sources */,
 				59BA73781D6B25A800DB9FF9 /* FillaTests.swift in Sources */,
+				59D836C91D6C6D4200339BFE /* LoginTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
