@@ -24,6 +24,7 @@ class LoginViewController: UIViewController, LoginView, LoginSegueHandler {
     // MARK: - Instance members
     var presenter: LoginPresenter?
     var validator: Validator?
+    var validationDelegate:LoginInputValidation?
     
     enum LoginSegueIdentifiers: String {
         
@@ -40,6 +41,14 @@ class LoginViewController: UIViewController, LoginView, LoginSegueHandler {
         configurator.configure()
         
         validator = Validator()
+        validationDelegate = LoginInputValidationDelegate(success: {() -> () in
+
+            if let user = self.username.text,
+               let pass = self.password.text {
+                    
+                    self.presenter?.authenticate(user, pass)
+            }})
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -48,7 +57,6 @@ class LoginViewController: UIViewController, LoginView, LoginSegueHandler {
         
         updateContent()
         configureForgotPassword()
-        configureValidator()
     }
 
     override func didReceiveMemoryWarning() {
@@ -76,25 +84,21 @@ class LoginViewController: UIViewController, LoginView, LoginSegueHandler {
         
         if let v = validator {
         
-            v.registerField(username, errorLabel: errorMessage, rules: [RequiredRule(message: "MISSING_PASSWORD".localized)])
-            v.registerField(password, errorLabel: errorMessage, rules: [RequiredRule(message: "RESET_PASSWORD".localized)])
+            v.registerField(username, errorLabel: errorMessage, rules: [RequiredRule(message: "MISSING_USERNAME".localized)])
+            v.registerField(password, errorLabel: errorMessage, rules: [RequiredRule(message: "MISSING_PASSWORD".localized)])
         }
     }
     
     // MARK: - User interaction
     @IBAction func doLogin(sender: AnyObject) {
         
-        validator?.validate({errors in
+        configureValidator()
+        validationDelegate?.resetErrors()
         
-            if errors.count == 0 {
-             
-                if let user = self.username.text,
-                   let pass = self.password.text {
-                        
-                        self.presenter?.authenticate(user, pass)
-                }
-            }
-        })
+        if let delegate = validationDelegate {
+        
+            validator?.validate(delegate)
+        }
     }
     
     func doResetPassword(sender:UITapGestureRecognizer) {
